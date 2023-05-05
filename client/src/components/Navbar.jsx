@@ -1,7 +1,9 @@
 import { Fragment } from 'react'
+import React from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import { useStateContext } from './Context'
 
 const navigation = [
   //{ name: 'DeFund', href: '#', current: true },
@@ -16,6 +18,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const {address, connect} = useStateContext()
   return (
     <Disclosure as="nav" className="bg-[#f1f1f1] w-screen fixed top-0">
       {({ open }) => (
@@ -70,12 +73,12 @@ items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full
+                    {address ? <Menu.Button className="flex rounded-full
 bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white
 focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <button className='bg-slate-800 text-white rounded px-5 py-2'>0xasdf234f2123</button>
-                    </Menu.Button>
+                      <p className='bg-slate-800 text-white rounded px-5 py-2'>{address}</p>
+                    </Menu.Button> : <button onClick={ () => { if(!address){ connect() }else{console.log('connected')}}} className='bg-slate-800 text-white rounded px-5 py-2'>Connect</button>}
                   </div>
                   <Transition
                     as={Fragment}
