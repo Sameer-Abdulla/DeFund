@@ -49,11 +49,11 @@ const CreateChitForm = () => {
           <label htmlFor="description" className="block font-bold mb-2">Description:</label>
           <textarea onChange={(e) => handleFormChange(e)}  id="description" placeholder='Enter description' name="desc" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
 
-          <label htmlFor="installmentAmount" className="block font-bold mb-2">Total Amount:</label>
-          <input onChange={(e) => handleFormChange(e)} type="number" id="totalAmount" placeholder='Enter Total Amount' name="total" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
+          <label htmlFor="installmentAmount" className="block font-bold mb-2">Total Amount (in ETH)</label>
+          <input onChange={(e) => handleFormChange(e)} type="number" id="totalAmount" placeholder='eg: 0.5' name="total" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
 
-          <label htmlFor="installmentAmount" className="block font-bold mb-2">Installment Amount:</label>
-          <input onChange={(e) => handleFormChange(e)} type="number" id="installmentAmount" placeholder='Enter Installment' name="inst" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
+          <label htmlFor="installmentAmount" className="block font-bold mb-2">Installment Amount (in ETH)</label>
+          <input onChange={(e) => handleFormChange(e)} type="number" id="installmentAmount" placeholder='eg: 0.1' name="inst" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
 
           <label htmlFor="period" className="block font-bold mb-2">Period (in months):</label>
           <input onChange={(e) => handleFormChange(e)} type="number" id="period" placeholder='eg: 2' name="period" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
@@ -64,7 +64,7 @@ const CreateChitForm = () => {
           <label htmlFor="deadline" className="block font-bold mb-2">Deadline:</label>
           <input onChange={(e) => handleFormChange(e)} type="date" id="deadline"  name="deadline" className="w-full mb-4 p-2 border-none bg-slate-50 border-gray-400 rounded" />
 
-          <button onClick={handleSubmit} type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Chit</button>
+          <button onClick={handleSubmit} type="submit" className="mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Chit</button>
         </form>
       </div>
     </div>

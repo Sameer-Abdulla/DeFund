@@ -56,7 +56,7 @@ const Feed = () => {
             Swap chit
           </button>
         </div>
-        <div className="p-4 bg-gray-50 border-t border-gray-200">
+        {/* <div className="p-4 bg-gray-50 border-t border-gray-200">
           <h3 className="text-lg font-bold text-gray-900">Chat with the winner</h3>
           <div className="mt-4 flex space-x-4">
             <input
@@ -68,7 +68,7 @@ const Feed = () => {
               Send
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     ))}
   </div>
